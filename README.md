@@ -24,10 +24,20 @@ Blender add-on for creating decals
 
 
 ### Change material/texture
-- Change a decal's material/textures just like any other object in Blender. Use Blender's shader editor or the material settings panel to adjust or assign existing materials to it. You can also drag and drop materials onto a decal from the asset browser window.
+- Change a decal's material/textures just like any other object in Blender. Use Blender's shader editor or the material settings panel to adjust or assign existing materials.
+- Library materials can also be applied to decals via drag and drop from Blender's Asset Browser window.
 ### Duplicate
-- Use Blender's normal UI or the hotkey control + D to duplicate a selected decal. Transform the decal as needed after duplication.
-- IMPORTANT: if you duplicate a decal, it still shares the same material as the decal it was duplicated from. Be sure to make the material unique if you plan on changing it to something different than the source decal. 
+- Use Blender's regular hotkeys/UI to duplicate a selected decal just like any other object. Transform the decal as needed after duplication.
+  NOTE: instancing a decal instead of duplicating will result in unwanted results. Always use duplicate.
+- IMPORTANT: if you duplicate a decal, it still shares the same material as the decal it was duplicated from. Make the material unique if you plan on changing it to something different than the original decal.
+### Parenting
+- Decals can be moved or duplicated at any time to affect any object in the scene.
+- Decals are automatically parented to the object they affect.  
+  (Auto parenting can be turned off in the addon preferences if needed)
+
+## Adjust Decal Panel
+### Placeholder
+
 ## Create Decals From Geometry
 (placeholder)
 
