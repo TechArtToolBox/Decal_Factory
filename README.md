@@ -26,6 +26,8 @@ Blender add-on for creating decals
 ### Change material/texture
 - Change a decal's material/textures just like any other object in Blender. Use Blender's shader editor or the material settings panel to adjust or assign existing materials.
 - Library materials can also be applied to decals via drag and drop from Blender's Asset Browser window.
+    <img width="640" height="360" alt="library_asset_drag_drop" src="https://github.com/user-attachments/assets/b324c3f9-8d29-41c9-936e-a6867f561955" />
+
 ### Duplicate
 - Use Blender's regular hotkeys/UI to duplicate a selected decal just like any other object. Transform the decal as needed after duplication.
   NOTE: instancing a decal instead of duplicating will result in unwanted results. Always use duplicate.
