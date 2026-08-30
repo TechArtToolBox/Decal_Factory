@@ -21,8 +21,6 @@ Blender add-on for creating decals
 - **Snapping:** Hold the control key to snap the decal position and orientation to the surface of other objects when moving.
 - To commit your changes press enter, or left click anywhere in the 3D view that isn't the decal. 
     <img width="640" height="360" alt="transform_decal" src="https://github.com/user-attachments/assets/8da490ac-ca0d-4370-98fc-733cce304c54" />
-- The decal will regenerate its mesh to exactly match the mesh of the object it affects, with no unnecessary geometry:  
-    <img width="717" height="392" alt="image" src="https://github.com/user-attachments/assets/97f0b80c-3a50-4749-9940-f23757081268" />
 
 
 ### Change material/texture
