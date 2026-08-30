@@ -5,14 +5,16 @@ Blender add-on for creating decals
 - Download Decal Factory here: (placeholder)  
 - Install like any other Blender add-on/extension.  
 - Once installed, the Decal Factory UI can be found in the side panel of the 3D viewport.
-- In the Decal Factory panel, check on "Enable Decal Factory" to initialize the main decal logic.
+- In the Decal Factory panel, check on "Enable Decal Factory" to initialize the main decal logic.  
   <img width="229" height="260" alt="image" src="https://github.com/user-attachments/assets/0c41ccaf-0d17-49af-a5f8-a6fab148e8ab" />
 
 ## Quick Start/Basics
 
 ### Create a Decal
 - Click "Add Decal" to enter decal creation mode.
-- Left click on any mesh in your scene to create a decal at the click location.
+- Left click on any mesh in your scene to create a decal at the click location.  
+  <img width="640" height="360" alt="add_decal" src="https://github.com/user-attachments/assets/a830c493-608a-42a8-879c-5d3e8b298dcd" />
+
 ### Move/Rotate/Scale and Surface Snapping
 - Use Blender's native transform tools to transform the decal.
 - If any transform is detected, the decal enters "proxy mode". This mode draws an inexpensive preview of your decal as you adjust. The yellow wire cube around the proxy decal shows its area of influence.
