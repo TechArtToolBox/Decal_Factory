@@ -6,6 +6,7 @@ Blender add-on for creating decals
 - Install like any other Blender add-on/extension.  
 - Once installed, the Decal Factory UI can be found in the side panel of the 3D viewport.
 - In the Decal Factory panel, check on "Enable Decal Factory" to initialize the main decal logic.
+  <img width="229" height="260" alt="image" src="https://github.com/user-attachments/assets/0c41ccaf-0d17-49af-a5f8-a6fab148e8ab" />
 
 ## Quick Start/Basics
 
