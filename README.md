@@ -19,8 +19,11 @@ Blender add-on for creating decals
 - Use Blender's native transform tools to transform the decal. (G/R/S hotkeys, or any transform gizmos)
 - If any transform is detected, the decal enters "proxy mode". This mode draws an inexpensive preview of your decal as you adjust. The yellow wire cube around the proxy decal shows its area of influence.
 - **Snapping:** Hold the control key to snap the decal position and orientation to the surface of other objects when moving.
-- To commit your changes press enter, or left click anywhere in the 3D view that isn't the decal. The decal will regenerate its mesh to match the mesh of the object it affects.  
+- To commit your changes press enter, or left click anywhere in the 3D view that isn't the decal. 
     <img width="640" height="360" alt="transform_decal" src="https://github.com/user-attachments/assets/8da490ac-ca0d-4370-98fc-733cce304c54" />
+- The decal will regenerate its mesh to exactly match the mesh of the object it affects, with no unnecessary geometry:  
+    <img width="717" height="392" alt="image" src="https://github.com/user-attachments/assets/97f0b80c-3a50-4749-9940-f23757081268" />
+
 
 ### Change material/texture
 - Change a decal's material/textures just like any other object in Blender. Use Blender's shader editor or the material settings panel to adjust or assign existing materials to it. You can also drag and drop materials onto a decal from the asset browser window.
