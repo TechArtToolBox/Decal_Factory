@@ -16,7 +16,7 @@ Blender add-on for creating decals
   <img width="640" height="360" alt="add_decal" src="https://github.com/user-attachments/assets/a830c493-608a-42a8-879c-5d3e8b298dcd" />
 
 ### Move/Rotate/Scale and Surface Snapping
-- Use Blender's native transform tools to transform the decal.
+- Use Blender's native transform tools to transform the decal. (G/R/S hotkeys, or any transform gizmos)
 - If any transform is detected, the decal enters "proxy mode". This mode draws an inexpensive preview of your decal as you adjust. The yellow wire cube around the proxy decal shows its area of influence.
 - **Snapping:** Hold the control key to snap the decal position and orientation to the surface of other objects when moving.
 - To commit your changes press enter, or left click anywhere in the 3D view that isn't the decal. The decal will regenerate its mesh to match the mesh of the object it affects.  
