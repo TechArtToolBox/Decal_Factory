@@ -34,9 +34,11 @@ Blender add-on for creating decals
   NOTE: if you duplicate a decal, it still shares the same material as the decal it was duplicated from. Make the material unique if you plan on changing it to something different.
   
 ### Parenting
-- Decals can be moved at any time to affect any object in the scene.
+- Decals can be moved freely to affect any mesh object in the scene.
 - Decals are automatically parented to the object they affect.  
-  (Auto parenting can be turned off in the add-on preferences if needed)
+  (Auto parenting can be turned off in the add-on preferences)  
+  <img width="640" height="360" alt="parenting_decals" src="https://github.com/user-attachments/assets/3667efa3-037b-4e08-91d3-c19e805e1546" />
+
 
 ## Adjust Decal Panel
 ### Placeholder
