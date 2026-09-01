@@ -16,22 +16,23 @@ Blender add-on for creating decals
   <img width="640" height="360" alt="add_decal" src="https://github.com/user-attachments/assets/a830c493-608a-42a8-879c-5d3e8b298dcd" />
 
 ### Move/Rotate/Scale and Surface Snapping
-- Use Blender's regular transform tools to transform the decal. (G/R/S hotkeys, or any of the transform gizmos)
-- If any transform is detected, the decal enters "proxy mode". This mode draws an inexpensive preview of your decal as you adjust. The yellow wire cube around the proxy decal shows its area of influence.
+- Use Blender's native transform tools to move/rotate/scale the decal. (G/R/S hotkeys, or any of the transform gizmos)
+- If a transform is detected, the decal enters "proxy mode". This mode draws an inexpensive preview of your decal as you adjust. The yellow wire cube around the proxy decal shows its area of influence.
 - **Snapping:** Hold the control key to snap the decal position and orientation to the surface of other objects when moving.
 - To commit your changes press enter, or left click anywhere in the 3D view that isn't the decal. 
     <img width="640" height="360" alt="transform_decal" src="https://github.com/user-attachments/assets/8da490ac-ca0d-4370-98fc-733cce304c54" />
 
 
 ### Change material/texture
-- Change a decal's material/textures just like any other object in Blender. Use Blender's shader editor or the material settings panel to adjust or assign existing materials.
-- Library materials can also be applied to decals via drag and drop from Blender's Asset Browser window.
+- Use Blender's shader editor or the material settings panel to adjust the material on a decal, or assign existing materials from your scene.
+- Library materials can also be applied to decals via drag and drop from Blender's Asset Browser window.  
     <img width="640" height="360" alt="library_asset_drag_drop" src="https://github.com/user-attachments/assets/b324c3f9-8d29-41c9-936e-a6867f561955" />
 
 ### Duplicate
-- Use Blender's regular hotkeys/UI to duplicate a selected decal just like any other object. Transform the decal as needed after duplication.
-  NOTE: instancing a decal instead of duplicating will result in unwanted results. Always use duplicate.
-- IMPORTANT: if you duplicate a decal, it still shares the same material as the decal it was duplicated from. Make the material unique if you plan on changing it to something different than the original decal.
+- Hotkey shift + d to duplicate a decal just like any other object.
+  <img width="640" height="360" alt="duplicate_decals" src="https://github.com/user-attachments/assets/41a41123-da5d-41e5-a09c-34bf82cd1b81" />  
+  NOTE: if you duplicate a decal, it still shares the same material as the decal it was duplicated from. Make the material unique if you plan on changing it to something different.
+  
 ### Parenting
 - Decals can be moved at any time to affect any object in the scene.
 - Decals are automatically parented to the object they affect.  
