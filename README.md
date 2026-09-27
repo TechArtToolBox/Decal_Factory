@@ -48,7 +48,7 @@ When a single decal is selected, this panel will populate with controls to adjus
 #### Material
 The current material for the decal. Changing the material here is identical to changing the material using the material tab in Blender's property panel.
 #### EEVEE Alpha
-Alpha sorting type for the decal material when rendering using EEVEE, and when in material preview mode in the 3D viewport. This is identical to changing the render method of a material in Blender's property panel.
+Render/Blend type for the decal material when using EEVEE, and also when in material preview mode in the 3D viewport. This is identical to changing the Render Method of a material in Blender 4.2+, or changing Blend Mode of a material in Blender 4.1 and below. 
 #### Proxy Preview
 Choose what type of proxy preview you want when transforming the decal. These are the different types:  
 <img width="235" height="163" alt="image" src="https://github.com/user-attachments/assets/59247519-78ff-4b62-a2ec-bad571419700" />
@@ -59,11 +59,11 @@ Choose what type of proxy preview you want when transforming the decal. These ar
 - **Color Custom:** Allows you to set a specific color and alpha for the proxy preview.
 - **Plane:** Draw the material fully rendered on a flat plane. The advantage here is that the material is lit and shaded like normal meshes, and not a proxy preview. The downside is that it is on a flat plane, and doesn't wrap to the geometry until you apply the decal, which can make precise placement difficult. 
 #### Offset
-text
+The distance that a decal is offset from the mesh it affects. If decals overlap each other, the decal with the higher offset will draw in front of the other(s).
 #### Trim By Angle
-text
+Limit decal influence based on angle. When on, the decal will not draw on faces where the face normal vs the decal projection direction create an angle greater than the value set.  
 #### Triangulate Decal Mesh
-text
+Use triangles for the decal mesh (default). This ensures maximum accuracy when matching the mesh of the source object. However there may be edge cases where you may prefer quads/ngons, so this option is there for that. 
 #### Copy Source Geo Normals
 text
 #### Flip Decal UVs
