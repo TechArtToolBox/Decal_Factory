@@ -59,11 +59,11 @@ Choose what type of proxy preview you want when transforming the decal. These ar
 - **Color Custom:** Allows you to set a specific color and alpha for the proxy preview.
 - **Plane:** Draw the material fully rendered on a flat plane. The advantage here is that the material is lit and shaded like normal meshes, and not a proxy preview. The downside is that it is on a flat plane, and doesn't wrap to the geometry until you apply the decal, which can make precise placement difficult. 
 #### Offset
-The distance that a decal is offset from the mesh it affects. If decals overlap each other, the decal with the higher offset will draw in front of the other(s).
+The distance that a decal is offset from the mesh it affects. The offset field shows the distance from the source mesh. The + and - buttons are used to bring a decal forward or backward. This is also used to change the sort order of decals when they overlap each other. If the change in offset is too small or too large when adjusting with + or -, the offset step can be adjusted in the add-on preferences.  
 #### Trim By Angle
 Limit decal influence based on angle. When on, the decal will not draw on faces where the face normal vs the decal projection direction create an angle greater than the value set.  
 #### Triangulate Decal Mesh
-Use triangles for the decal mesh (default). This ensures maximum accuracy when matching the mesh of the source object. However there may be edge cases where you may prefer quads/ngons, so this option is there for that. 
+Use triangles for the decal mesh (default). This ensures maximum accuracy when matching the mesh of the source object. There may be edge cases where you prefer a non-triangulated decal mesh, so this option is there for that. If clipping occurs on a non-triangulated decal, increase the offset to compensate. 
 #### Copy Source Geo Normals
 text
 #### Flip Decal UVs
