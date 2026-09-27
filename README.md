@@ -40,8 +40,37 @@ Blender add-on for creating decals
   <img width="640" height="360" alt="parenting_decals" src="https://github.com/user-attachments/assets/3667efa3-037b-4e08-91d3-c19e805e1546" />
 
 
-## Adjust Decal Panel
-### Placeholder
+  
+## Adjust Selected Decal Panel
+When a single decal is selected, this panel will populate with controls to adjust settings on the selected decal.
+<img width="242" height="464" alt="image" src="https://github.com/user-attachments/assets/8de97f56-69a0-42fe-9f85-7c1492ebf88f" />
+
+#### Material
+The current material for the decal. Changing the material here is identical to changing the material using the material tab in Blender's property panel.
+#### EEVEE Alpha
+Alpha sorting type for the decal material when rendering using EEVEE, and when in material preview mode in the 3D viewport. This is identical to changing the render method of a material in Blender's property panel.
+#### Proxy Preview
+Choose what type of proxy preview you want when transforming the decal. These are the different types:  
+<img width="235" height="163" alt="image" src="https://github.com/user-attachments/assets/59247519-78ff-4b62-a2ec-bad571419700" />
+- **Image Auto:** Draw the proxy using the best fit image found from the image nodes in the decal material.
+- **Image Custom:** Use this to set a specific image for proxy preview. Helpful if 'Image Auto' is not finding something you like automatically.
+- **Color Base:** Use the base color value from the first BSDF node found in the material.
+- **Color Emissive:** Use the emissive color value from the first BSDF node found in the material.
+- **Color Custom:** Allows you to set a specific color and alpha for the proxy preview.
+- **Plane:** Draw the material fully rendered on a flat plane. The advantage here is that the material is lit and shaded like normal meshes, and not a proxy preview. The downside is that it is on a flat plane, and doesn't wrap to the geometry until you apply the decal, which can make precise placement difficult. 
+#### Offset
+text
+#### Trim By Angle
+text
+#### Triangulate Decal Mesh
+text
+#### Copy Source Geo Normals
+text
+#### Flip Decal UVs
+text
+#### Force Redraw Decal
+text
+
 
 ## Create Decals From Geometry
 (placeholder)
