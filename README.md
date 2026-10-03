@@ -43,12 +43,13 @@ Blender add-on for creating decals
   
 ## Adjust Selected Decal Panel
 When a single decal is selected, this panel will populate with controls to adjust settings on the selected decal.
-<img width="242" height="464" alt="image" src="https://github.com/user-attachments/assets/8de97f56-69a0-42fe-9f85-7c1492ebf88f" />
+<img width="243" height="422" alt="image" src="https://github.com/user-attachments/assets/086efb12-8bad-4705-bd45-cf57f2b8336f" />
+
+
 
 #### Material
-The current material for the decal. Changing the material here is identical to changing the material using the material tab in Blender's property panel.
-#### EEVEE Alpha
-Render/Blend type for the decal material when using EEVEE, and also when in material preview mode in the 3D viewport. This is identical to changing the Render Method of a material in Blender 4.2+, or changing Blend Mode of a material in Blender 4.1 and below. 
+The current material for the decal. Changing the material here is identical to changing the material using the material tab in Blender's property panel.  
+
 #### Proxy Preview
 Choose what type of proxy preview you want when transforming the decal. These are the different types:  
 <img width="235" height="163" alt="image" src="https://github.com/user-attachments/assets/59247519-78ff-4b62-a2ec-bad571419700" />
