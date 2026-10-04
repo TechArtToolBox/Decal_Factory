@@ -107,7 +107,7 @@ The **Generate Decal From Mesh** panel can be used to create new decals based on
 
 There are 2 categories of maps that can be baked for your decal, **Standard** and **Advanced**.  
 - **Standard Maps:** Color, Normal, Roughness, Metallic, and Emissive.  
-  When choosing what standard maps to bake, you only need to bake a map if there is variation in that type across the source mesh. For example, if your source mesh material is a solid color, you DO NOT need to bake color, as the bake will just set the color of the decal to match. The same goes for roughness, metallic, and emissive. For normals, if your mesh is perfectly flat ( simple text for example ) there is no need to bake normals either.
+  When choosing what standard maps to bake, you only need to bake a map if there is variation in that type across the source mesh. For example, if your source mesh material is a solid color, you DO NOT need to bake color, as the bake will just set the color of the decal to match. The same goes for roughness, metallic, and emissive. For normals, if your mesh is perfectly flat ( simple text for example ) there is no need to bake normals.
    
 - **Advanced Maps:** Height, Ambient Occlusion (AO), and Material IDs.  
   These generate data about the mesh that can then be used in the decal material to generate complex effects.
@@ -119,11 +119,11 @@ There are 2 categories of maps that can be baked for your decal, **Standard** an
 #### Output Size
 <img width="229" height="37" alt="image" src="https://github.com/user-attachments/assets/400899b9-ea6f-4cde-8a3a-044124545a6d" />  
 
-Choose the output resolution of all baked maps for the newly generated decal. Current options are 256, 512, and 1024. Supersampling can be used to increase bake quality.
+Choose the output resolution of all baked maps for the newly generated decal. Supersampling can be used to increase bake quality.
 #### Use Supersampling
 <img width="228" height="30" alt="image" src="https://github.com/user-attachments/assets/d6f7fc1c-ca05-4e74-93c5-00683e8d96db" />  
 
-Supersampling will bake all the maps at double the resolution of the output size and then downsample them to the final output size. The drawback being a longer bake time, but the upside being smoother results. (This image is zoomed in way closer than the camera should ever be to a 512x512 decal, but is useful to see the difference)  
+Supersampling will bake all the decal maps at double the resolution of the output size and then downsample them to the final output size. Supersampling produces smoother maps, the downside being a longer bake time. This zoomed in image shows the difference on a 512x512 decal:  
 <img width="820" height="303" alt="image" src="https://github.com/user-attachments/assets/e74d6080-d260-46b2-b900-80299cd9818b" />  
 
 #### Output Folder
@@ -134,29 +134,30 @@ Where to save the baked images. Use the folder icon to select a folder path, or 
 #### Bake Name
 <img width="233" height="36" alt="image" src="https://github.com/user-attachments/assets/0281ab39-526c-4f0b-85c6-73a6450d62d3" />  
 
-This name will be used to name the newly created decal, it's material, and all of the baked images related to the bake. If the name already exists in your scene, it will automatically append '.001', '.002' etc, just like with any other Blender naming clash.  
+This name will be used to name the newly created decal, it's material, and all of the baked images related to the bake. If the name already exists in your Blender file, it will automatically append '.001', '.002' etc, just like with any other Blender naming clash.  
 **IMPORTANT:** If the name does not exist in your scene, but files with the same name and output folder exist, THEY WILL BE OVERWRITTEN. Be mindful of that when choosing bake output.
-### Generate Decal From Mesh
-Now that all the settings are in place, **perform the actual bake**:  
-Select your source mesh, and click the 'Generate Decal From Mesh Button'  
-<img width="234" height="33" alt="image" src="https://github.com/user-attachments/assets/e6d8b203-39b5-42cc-b6c6-2dc3ddb3b85b" />  
+### Create The New Decal
+- Select only your source mesh.
+- click the 'Generate Decal From Mesh' button.    
+  <img width="236" height="35" alt="image" src="https://github.com/user-attachments/assets/b42042b5-2623-436e-ba95-315a8595b734" />  
 
-The Blender UI will freeze during the bake, this is to be expected.  
+
+The Blender UI will freeze during the bake, this is normal.  
 The bake can take anywhere from 30 seconds to 5+ minutes depending on your bake settings, computer hardware, and Blender version.  
 Once the bake is complete, the newly created decal will appear above the source mesh and it will be selected.  
-Here is an example of a decal bake result of Suzanne ( the Monkey )  
+Here is an example of a decal bake result of Suzanne:  
 <img width="603" height="497" alt="image" src="https://github.com/user-attachments/assets/62dcd483-970e-4e3c-acb7-b8298825a64d" />  
 
-Adjust/Transform the newly created decal exactly like any other decal. Here is that new decal applied to a sphere:  
+Adjust/Transform the newly created decal like any other decal. Here is that new decal applied to a sphere:  
 <img width="529" height="474" alt="image" src="https://github.com/user-attachments/assets/8b027c63-f45e-4c48-85ca-6775b2e43abd" />
 
 
 
-**Baking Notes**  
-- The Blender UI WILL lock up during a bake. Give it time. 
-- Recommended: If it is your first time baking a decal, bake a simple low resolution test decal to get an estimate of how long a basic bake will take on your computer. Then slowly add extra maps/settings to the bake to get an idea of how long things should take with your setup. 
-- Watch the bottom of the Blender UI for any warnings about your bake settings. It will exit early if it finds any issues. A few examples:
-  <img width="344" height="109" alt="image" src="https://github.com/user-attachments/assets/00cd3ead-3a00-42ae-985f-1cc681742638" /><img width="497" height="93" alt="image" src="https://github.com/user-attachments/assets/276e13f4-fcf2-4d58-a70f-68fe7a75c298" />
+**Decal Baking Notes**  
+- The Blender UI WILL lock up during this process. Give it time. 
+- Recommended: If it is your first time generating a decal, bake a simple low resolution test decal to get an estimate of how long a simple bake will take on your computer. Then slowly add extra maps/settings to the bake to get an idea of how long complex bakes should take with your setup. 
+- Watch the bottom of the Blender UI for any warnings about your settings. It will exit early if it finds any issues. A few examples:
+  <img width="344" height="109" alt="image" src="https://github.com/user-attachments/assets/00cd3ead-3a00-42ae-985f-1cc681742638" />  <img width="497" height="93" alt="image" src="https://github.com/user-attachments/assets/276e13f4-fcf2-4d58-a70f-68fe7a75c298" />
 
 - Just like a normal render, bake times depend on your computer and your render settings (gpu vs cpu, choosing the correct render device settings in Blender preferences etc)
 
@@ -164,14 +165,14 @@ Adjust/Transform the newly created decal exactly like any other decal. Here is t
 ## Troubleshooting
 ### General
 #### Decal Not Drawing
-#### Decal Looks Correct In Viewport, But is Clipping/Acting Weird In Render
+#### Decal Looks Correct In Viewport, But is Clipping In Render
 <img width="831" height="359" alt="image" src="https://github.com/user-attachments/assets/c26092ab-62d2-41f1-8194-d35ac35f7385" />  
 
 This happens when a decal is projected on a mesh that has a subdivision modifier, but the subdivision modifier has different levels of subdivision for the viewport vs the render:  
 <img width="328" height="265" alt="image" src="https://github.com/user-attachments/assets/ad654bcc-a35c-4ef8-a3cf-b8f5cf1608c0" />  
   
 
-**How to solve:**
+**Solve:**
 - Make the subdivision levels match for both the viewport and render, and update the decal if needed using 'Force Redraw Decal' or 'Redraw Decals In Selection' from the Decal Factory UI.  
   <img width="282" height="79" alt="image" src="https://github.com/user-attachments/assets/19c0caaf-fbc6-48fd-84f5-bda73d74950b" />
 
