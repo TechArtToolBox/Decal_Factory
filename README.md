@@ -122,28 +122,37 @@ Supersampling will bake all the maps at double the resolution of the output size
 #### Output Folder
 <img width="229" height="53" alt="image" src="https://github.com/user-attachments/assets/bcbbf5e9-a758-429b-b4a5-e70bd9d33cc1" />  
 
-Where to save the baked images. Use the folder icon to select a folder path, or type it in manually. If the folder does not exist, baking will exit early and warn about the path being invalid. 
+Where to save the baked images. Use the folder icon to select a folder path, or type it in manually. If the folder does not exist or is not writable, baking will exit early and warn about the path being invalid. 
 
 #### Bake Name
 <img width="233" height="36" alt="image" src="https://github.com/user-attachments/assets/0281ab39-526c-4f0b-85c6-73a6450d62d3" />  
 
 This name will be used to name the newly created decal, it's material, and all of the baked images related to the bake. If the name already exists in your scene, it will automatically append '.001', '.002' etc, just like with any other Blender naming clash.  
-**IMPORTANT:**  
-- If the name does not exist in your scene, but files with the same name and output folder exist, THEY WILL BE OVERWRITTEN. Be mindful of that when choosing bake output.
+**IMPORTANT:** If the name does not exist in your scene, but files with the same name and output folder exist, THEY WILL BE OVERWRITTEN. Be mindful of that when choosing bake output.
 ### Generate Decal From Mesh
+Now that all the settings are in place, **perform the actual bake**:  
+Select your source mesh, and click the 'Generate Decal From Mesh Button'  
 <img width="234" height="33" alt="image" src="https://github.com/user-attachments/assets/e6d8b203-39b5-42cc-b6c6-2dc3ddb3b85b" />  
 
-Press this button to generate a new decal based on your settings.  
+The Blender UI will freeze during the bake, this is to be expected.  
+The bake can take anywhere from 30 seconds to 5+ minutes depending on your bake settings, computer hardware, and Blender version.  
+Once the bake is complete, the newly created decal will appear above the source mesh and it will be selected.  
+Here is an example of a decal bake result of Suzanne ( the Monkey )  
+<img width="603" height="497" alt="image" src="https://github.com/user-attachments/assets/62dcd483-970e-4e3c-acb7-b8298825a64d" />  
+
+Adjust/Transform the newly created decal exactly like any other decal. Here is that new decal applied to a sphere:  
+<img width="529" height="474" alt="image" src="https://github.com/user-attachments/assets/8b027c63-f45e-4c48-85ca-6775b2e43abd" />
+
+
 
 **Baking Notes**  
-- Watch the bottom of the Blender UI for any warnings about your bake settings. It will exit early if it finds an issue.
-- Blender WILL lock up during a bake.
-  A bake can take anywhere from 30 seconds to 5+ minutes depending on options/hardware/Blender version.
-- The more maps, the longer the bake
-- Supersampling increases bake time
-- The older the version of Blender, the longer the bake
+- The Blender UI WILL lock up during a bake. Give it time. 
+- Recommended: If it is your first time baking a decal, bake a simple low resolution test decal to get an estimate of how long a basic bake will take on your computer. Then slowly add extra maps/settings to the bake to get an idea of how long things should take with your setup. 
+- Watch the bottom of the Blender UI for any warnings about your bake settings. It will exit early if it finds any issues. A few examples:
+  <img width="344" height="109" alt="image" src="https://github.com/user-attachments/assets/00cd3ead-3a00-42ae-985f-1cc681742638" /><img width="497" height="93" alt="image" src="https://github.com/user-attachments/assets/276e13f4-fcf2-4d58-a70f-68fe7a75c298" />
+
 - Just like a normal render, bake times depend on your computer and your render settings (gpu vs cpu, choosing the correct render device settings in Blender preferences etc)
-- Recommended: If it is your first time baking, bake a simple low resolution decal and slowly add add features to get an idea of how long a bake will take on your computer. 
+
  
 ## Troubleshooting
 (placeholder)
