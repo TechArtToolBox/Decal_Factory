@@ -1,8 +1,11 @@
 # Decal Factory
 Blender add-on for creating decals
 
+[Installation](#installation)  
 [Quick Start](#quick-startbasics)  
 [Adjust Decals](#adjust-decals)  
+[Generate Decals From Mesh](#generating-new-decals-from-existing-geo)  
+[Troubleshooting](#troubleshooting)  
 
 ## Installation
 - Download Decal Factory here: (placeholder)  
