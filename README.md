@@ -41,8 +41,8 @@ Blender add-on for creating decals
 
 
   
-## Adjust Selected Decal Panel
-When a single decal is selected, this panel will populate with controls to adjust settings on the selected decal.
+## Adjust Decals
+When a single decal is selected, the **Adjust Selected Decal** panel can be used to adjust decal specific settings on a decal.
 <img width="243" height="422" alt="image" src="https://github.com/user-attachments/assets/086efb12-8bad-4705-bd45-cf57f2b8336f" />
 
 
@@ -64,7 +64,7 @@ Choose what type of proxy preview you want when transforming the decal. These ar
 #### Offset  
 <img width="238" height="44" alt="image" src="https://github.com/user-attachments/assets/371d500d-d193-4bb1-b66f-42c3fdf0a858" />  
 
-The distance that a decal is offset from the mesh it affects. The offset field shows the distance a decal's vertices are away from the vertices of the source mesh. The + and - buttons are used to bring a decal closer or further away to the source mesh. This is also used to change the sort order of decals when they overlap each other. If the change in offset is too small or too large when adjusting with + or -, the offset amount can be adjusted in the add-on preferences for Decal Factory under 'Decal Offset Step'.  
+The distance that a decal is offset from the mesh it affects. The offset field shows the distance a decal's vertices are offset from the vertices of the source mesh. The + and - buttons are used to bring a decal closer or further away to the source mesh. This is also used to change the sort order of decals when they overlap each other. If the change in offset is too small or too large when adjusting with + or -, the offset amount can be adjusted in the add-on preferences for Decal Factory under 'Decal Offset Step'.  
 
 #### Trim By Angle  
 <img width="241" height="33" alt="image" src="https://github.com/user-attachments/assets/75a09c40-d054-4153-b7a4-278ead8b08b0" />  
@@ -89,8 +89,30 @@ Flip the UVs of a decal in the U or V direction. This can be used to mirror a de
 Redraws the mesh of the currently selected decal. Useful if the mesh a decal affects has been changed and the decal needs to update to match, or edge cases where a decal is not drawing correctly, or is stuck in proxy preview mode. 
 
 
-## Create Decals From Geometry
-(placeholder)
+## Generating New Decals From Existing Geo
+The **Generate Decal From Mesh** panel can be used to create new decals based on existing meshes in your scene.  
+<img width="235" height="533" alt="image" src="https://github.com/user-attachments/assets/2bb81f01-fcad-4bda-92ee-c4ed4b9bfe18" />  
 
+### Pre Bake Prep
+- Model/rotate your source geo so that it faces upward in your scene. The decal will be generated from a top down projection. The location and scale of your source object is not important, the bake will compensate for that automatically.
+- Set Blender's render engine to Cycles if it is not already.
+### Choosing What Maps To Bake  
+<img width="225" height="209" alt="image" src="https://github.com/user-attachments/assets/002e4407-b1ac-40bd-8a88-b5aba3cf7dc7" />  
+
+There are 2 categories of maps that can be baked for your decal, **Standard** and **Advanced**.  
+- **Standard Maps:** Color, Normal, Roughness, Metallic, and Emissive.  
+  When choosing what standard maps to bake, you only need to bake a map if there is variation in that type across the source mesh. For example, if your source mesh material is a solid color, you DO NOT need to bake color, as the bake will just set the color of the decal to match. The same goes for roughness, metallic, and emissive. For normals, if your mesh is perfectly flat ( simple text for example ) there is no need to bake normals either.
+   
+- **Advanced Maps:** Height, Ambient Occlusion (AO), and Material IDs.  
+  These generate data about the mesh that can then be used in the decal material to generate complex effects.
+  More information about how to use these maps can be found here [placeholder]
+
+### Output Settings
+#### Output Size
+#### Use Super Sampling
+#### Output Folder
+#### Bake Name
+### Generate Decal From Mesh
+ 
 ## Troubleshooting
 (placeholder)
