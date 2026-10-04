@@ -1,5 +1,8 @@
 # Decal Factory
-Blender add-on for creating decals  
+Blender add-on for creating decals
+
+[Quick Start](#quick-startbasics)  
+[Adjust Decals](#adjust-decals)  
 
 ## Installation
 - Download Decal Factory here: (placeholder)  
