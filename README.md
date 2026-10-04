@@ -43,9 +43,8 @@ Blender add-on for creating decals
   
 ## Adjust Decals
 When a single decal is selected, the **Adjust Selected Decal** panel can be used to adjust decal specific settings on a decal.
+
 <img width="243" height="422" alt="image" src="https://github.com/user-attachments/assets/086efb12-8bad-4705-bd45-cf57f2b8336f" />
-
-
 
 #### Material  
 <img width="236" height="29" alt="image" src="https://github.com/user-attachments/assets/a4822f1b-06bc-4108-afc8-ad59e97fecb5" />  
@@ -108,11 +107,43 @@ There are 2 categories of maps that can be baked for your decal, **Standard** an
   More information about how to use these maps can be found here [placeholder]
 
 ### Output Settings
+<img width="231" height="147" alt="image" src="https://github.com/user-attachments/assets/c42fbb36-d8c3-4312-8823-f4606cacc6bf" />  
+
 #### Output Size
-#### Use Super Sampling
+<img width="229" height="37" alt="image" src="https://github.com/user-attachments/assets/400899b9-ea6f-4cde-8a3a-044124545a6d" />  
+
+Choose the output resolution of all baked maps for the newly generated decal. Current options are 256, 512, and 1024. Supersampling can be used to increase bake quality.
+#### Use Supersampling
+<img width="228" height="30" alt="image" src="https://github.com/user-attachments/assets/d6f7fc1c-ca05-4e74-93c5-00683e8d96db" />  
+
+Supersampling will bake all the maps at double the resolution of the output size and then downsample them to the final output size. The drawback being a longer bake time, but the upside being smoother results. (This image is zoomed in way closer than the camera should ever be to a 512x512 decal, but is useful to see the difference)  
+<img width="820" height="303" alt="image" src="https://github.com/user-attachments/assets/e74d6080-d260-46b2-b900-80299cd9818b" />  
+
 #### Output Folder
+<img width="229" height="53" alt="image" src="https://github.com/user-attachments/assets/bcbbf5e9-a758-429b-b4a5-e70bd9d33cc1" />  
+
+Where to save the baked images. Use the folder icon to select a folder path, or type it in manually. If the folder does not exist, baking will exit early and warn about the path being invalid. 
+
 #### Bake Name
+<img width="233" height="36" alt="image" src="https://github.com/user-attachments/assets/0281ab39-526c-4f0b-85c6-73a6450d62d3" />  
+
+This name will be used to name the newly created decal, it's material, and all of the baked images related to the bake. If the name already exists in your scene, it will automatically append '.001', '.002' etc, just like with any other Blender naming clash.  
+**IMPORTANT:**  
+- If the name does not exist in your scene, but files with the same name and output folder exist, THEY WILL BE OVERWRITTEN. Be mindful of that when choosing bake output.
 ### Generate Decal From Mesh
+<img width="234" height="33" alt="image" src="https://github.com/user-attachments/assets/e6d8b203-39b5-42cc-b6c6-2dc3ddb3b85b" />  
+
+Press this button to generate a new decal based on your settings.  
+
+**Baking Notes**  
+- Watch the bottom of the Blender UI for any warnings about your bake settings. It will exit early if it finds an issue.
+- Blender WILL lock up during a bake.
+  A bake can take anywhere from 30 seconds to 5+ minutes depending on options/hardware/Blender version.
+- The more maps, the longer the bake
+- Supersampling increases bake time
+- The older the version of Blender, the longer the bake
+- Just like a normal render, bake times depend on your computer and your render settings (gpu vs cpu, choosing the correct render device settings in Blender preferences etc)
+- Recommended: If it is your first time baking, bake a simple low resolution decal and slowly add add features to get an idea of how long a bake will take on your computer. 
  
 ## Troubleshooting
 (placeholder)
