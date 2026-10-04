@@ -6,7 +6,8 @@ Blender add-on for creating decals
 - Install like any other Blender add-on/extension.  
 - The Decal Factory UI can be found in the side panel of the 3D viewport.
 - In the Decal Factory panel, check on "Enable Decal Factory".  
-  <img width="229" height="260" alt="image" src="https://github.com/user-attachments/assets/0c41ccaf-0d17-49af-a5f8-a6fab148e8ab" />
+  <img width="350" height="306" alt="image" src="https://github.com/user-attachments/assets/c67559ef-f6e8-4a73-8dd0-f46e318ea590" />
+
 
 ## Quick Start/Basics
 
@@ -161,7 +162,8 @@ Adjust/Transform the newly created decal exactly like any other decal. Here is t
 <img width="831" height="359" alt="image" src="https://github.com/user-attachments/assets/c26092ab-62d2-41f1-8194-d35ac35f7385" />  
 
 This happens when a decal is projected on a mesh that has a subdivision modifier, but the subdivision modifier has different levels of subdivision for the viewport vs the render:  
-<img width="334" height="301" alt="image" src="https://github.com/user-attachments/assets/ce40417c-276f-498c-9951-82986cd82104" />  
+<img width="328" height="265" alt="image" src="https://github.com/user-attachments/assets/ad654bcc-a35c-4ef8-a3cf-b8f5cf1608c0" />  
+  
 
 **How to solve:**
 - Make the subdivision levels match for both the viewport and render, and update the decal if needed using 'Force Redraw Decal' or 'Redraw Decals In Selection' from the Decal Factory UI.  
