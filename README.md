@@ -38,7 +38,7 @@ Blender add-on for creating decals
 ### Duplicate
 - Hotkey shift + d to duplicate a decal just like any other object.
   <img width="640" height="360" alt="duplicate_decals" src="https://github.com/user-attachments/assets/41a41123-da5d-41e5-a09c-34bf82cd1b81" />  
-  NOTE: if you duplicate a decal, it still shares the same material as the decal it was duplicated from. Make the material unique if you plan on changing it to something different.
+- NOTE: if you duplicate a decal, it still shares the same material as the decal it was duplicated from. Make the material unique if you plan on changing it to something different.
   
 ### Parenting
 - Decals can be moved freely to affect any mesh object in the scene.
@@ -49,72 +49,79 @@ Blender add-on for creating decals
 
   
 ## Adjust Decals
-When a single decal is selected, the **Adjust Selected Decal** panel can be used to adjust decal specific settings on a decal.
+- When a single decal is selected, the **Adjust Selected Decal** panel can be used to adjust decal specific settings on a decal.
 
-<img width="243" height="422" alt="image" src="https://github.com/user-attachments/assets/086efb12-8bad-4705-bd45-cf57f2b8336f" />
+  <img width="243" height="422" alt="image" src="https://github.com/user-attachments/assets/086efb12-8bad-4705-bd45-cf57f2b8336f" />
 
 #### Material  
-<img width="236" height="29" alt="image" src="https://github.com/user-attachments/assets/a4822f1b-06bc-4108-afc8-ad59e97fecb5" />  
-
-The current material for the decal. Changing the material here is identical to changing the material using the material tab in Blender's property panel.  
+- The current material for the decal. Changing the material here is identical to changing the material using the material tab in Blender's property panel.
+  
+  <img width="236" height="29" alt="image" src="https://github.com/user-attachments/assets/a4822f1b-06bc-4108-afc8-ad59e97fecb5" />  
+  
 
 #### Proxy Preview
-Choose what type of proxy preview you want when transforming the decal. These are the different types:  
-<img width="235" height="163" alt="image" src="https://github.com/user-attachments/assets/59247519-78ff-4b62-a2ec-bad571419700" />
-- **Image Auto:** Draw the proxy using the best fit image found from the image nodes in the decal material.
-- **Image Custom:** Use this to set a specific image for proxy preview. Helpful if 'Image Auto' is not finding something you like automatically.
-- **Color Base:** Use the base color value from the first BSDF node found in the material.
-- **Color Emissive:** Use the emissive color value from the first BSDF node found in the material.
-- **Color Custom:** Allows you to set a specific color and alpha for the proxy preview.
-- **Plane:** Draw the material fully rendered on a flat plane. The advantage here is that the material is lit and shaded like normal meshes, and not a proxy preview. The downside is that it is on a flat plane, and doesn't wrap to the geometry until you apply the decal, which can make precise placement difficult. 
-#### Offset  
-<img width="238" height="44" alt="image" src="https://github.com/user-attachments/assets/371d500d-d193-4bb1-b66f-42c3fdf0a858" />  
-
-The distance that a decal is offset from the mesh it affects. The offset field shows the distance a decal's vertices are offset from the vertices of the source mesh. The + and - buttons are used to bring a decal closer or further away to the source mesh. This is also used to change the sort order of decals when they overlap each other. If the change in offset is too small or too large when adjusting with + or -, the offset amount can be adjusted in the add-on preferences for Decal Factory under 'Decal Offset Step'.  
+- Choose what type of proxy preview you want when transforming the decal. These are the different types:  
+  <img width="235" height="163" alt="image" src="https://github.com/user-attachments/assets/59247519-78ff-4b62-a2ec-bad571419700" />
+    - **Image Auto:** Draw the proxy using the best fit image found from the image nodes in the decal material.
+    - **Image Custom:** Use this to set a specific image for proxy preview. Helpful if 'Image Auto' is not finding something you like automatically.
+    - **Color Base:** Use the base color value from the first BSDF node found in the material.
+    - **Color Emissive:** Use the emissive color value from the first BSDF node found in the material.
+    - **Color Custom:** Allows you to set a specific color and alpha for the proxy preview.
+    - **Plane:** Draw the material fully rendered on a flat plane. The advantage here is that the material is lit and shaded like normal meshes, and not a proxy preview. The downside is that it is on a flat plane, and doesn't wrap to the geometry until you apply the decal, which can make precise placement difficult. 
+#### Offset
+- The distance that a decal is offset from the mesh it affects.  
+    <img width="238" height="44" alt="image" src="https://github.com/user-attachments/assets/371d500d-d193-4bb1-b66f-42c3fdf0a858" />  
+  The offset field shows the distance a decal's vertices are offset from the vertices of the source mesh. The + and - buttons are used to bring a decal closer or further away to the source mesh. This is also used to change the sort order of decals when they overlap each other. If the change in offset is too small or too large when adjusting with + or -, the offset amount can be adjusted in the add-on preferences for Decal Factory under 'Decal Offset Step'. 
 
 #### Trim By Angle  
-<img width="241" height="33" alt="image" src="https://github.com/user-attachments/assets/75a09c40-d054-4153-b7a4-278ead8b08b0" />  
+- Limit decal influence based on angle.  
+  <img width="241" height="33" alt="image" src="https://github.com/user-attachments/assets/75a09c40-d054-4153-b7a4-278ead8b08b0" />  
+When on, the decal will not draw on faces where the face normal vs the decal projection direction create an angle greater than the value set.
 
-Limit decal influence based on angle. When on, the decal will not draw on faces where the face normal vs the decal projection direction create an angle greater than the value set.  
 #### Triangulate Decal Mesh  
-<img width="234" height="32" alt="image" src="https://github.com/user-attachments/assets/bd87bb44-70d0-4691-9729-73f55555aede" />  
+- Use triangles for the decal mesh (default).  
+  <img width="234" height="32" alt="image" src="https://github.com/user-attachments/assets/bd87bb44-70d0-4691-9729-73f55555aede" />  
+ This ensures maximum accuracy when matching the mesh of the source object to prevent clipping/Z fighting. There may be edge cases where a non-triangulated decal mesh is needed, so this option is there for that. If clipping/Z fighting occurs on a non-triangulated decal, increase the offset to compensate.
 
-Use triangles for the decal mesh (default). This ensures maximum accuracy when matching the mesh of the source object to prevent clipping/Z fighting. There may be edge cases where a non-triangulated decal mesh is needed, so this option is there for that. If clipping/Z fighting occurs on a non-triangulated decal, increase the offset to compensate. 
 #### Copy Source Geo Normals  
-<img width="239" height="29" alt="image" src="https://github.com/user-attachments/assets/ae0f53e3-87ec-43c8-9dcc-cb7b9169a82b" />  
+- Adds a data transfer modifier to the decal that copies the geometry normals from the source mesh.  
+  <img width="239" height="29" alt="image" src="https://github.com/user-attachments/assets/ae0f53e3-87ec-43c8-9dcc-cb7b9169a82b" />  
+ This can help solve issues in advanced decal setups where a decal is not blending correctly with the underlying geometry.
 
-Adds a data transfer modifier to the decal that copies the geometry normals from the source mesh. This can help solve issues where a decal is not blending correctly with the underlying geometry.
+#### Flip Decal UVs 
+- Flip the UVs of a decal in the U or V direction.  
+  <img width="234" height="28" alt="image" src="https://github.com/user-attachments/assets/c8247d7b-9418-422a-9627-9d6486bc4a86" />  
+ This can be used to mirror a decal left to right, or top to bottom. NOTE: Flipping the UVs can make the decal look incorrect if it is using parallax in its material.
 
-#### Flip Decal UVs  
-<img width="234" height="28" alt="image" src="https://github.com/user-attachments/assets/c8247d7b-9418-422a-9627-9d6486bc4a86" />  
-
-Flip the UVs of a decal in the U or V direction. This can be used to mirror a decal left to right, or top to bottom. NOTE: Flipping the UVs can make the decal look incorrect if it is using parallax in its material.
 #### Force Redraw Decal  
-<img width="237" height="50" alt="image" src="https://github.com/user-attachments/assets/b8b51362-e7a4-44a3-843c-f200aca1b782" />  
-
+- Redraws the mesh of the currently selected decal.  
+  <img width="237" height="50" alt="image" src="https://github.com/user-attachments/assets/b8b51362-e7a4-44a3-843c-f200aca1b782" />  
 Redraws the mesh of the currently selected decal. Useful if the mesh a decal affects has been changed and the decal needs to update to match, or edge cases where a decal is not drawing correctly, or is stuck in proxy preview mode. 
 
 
 ## Generating New Decals From Existing Geo
-The **Generate Decal From Mesh** panel can be used to create new decals based on existing meshes in your scene.  
-<img width="235" height="533" alt="image" src="https://github.com/user-attachments/assets/2bb81f01-fcad-4bda-92ee-c4ed4b9bfe18" />  
+- The **Generate Decal From Mesh** panel can be used to create new decals based on existing meshes in your scene.  
+  <img width="235" height="533" alt="image" src="https://github.com/user-attachments/assets/2bb81f01-fcad-4bda-92ee-c4ed4b9bfe18" />  
 
 ### Pre Bake Prep
-- Model/rotate your source geo so that it faces upward in your scene. The decal will be generated from a top down projection. The location and scale of your source object is not important, the bake will compensate for that automatically.
+- Model/rotate your source geo so that it faces upward in your scene. The decal will be generated from a top down projection. The location and scale of your source object is not important, the bake will compensate.
 - Set Blender's render engine to Cycles if it is not already.
-### Choosing What Maps To Bake  
-<img width="225" height="209" alt="image" src="https://github.com/user-attachments/assets/002e4407-b1ac-40bd-8a88-b5aba3cf7dc7" />  
-
-There are 2 categories of maps that can be baked for your decal, **Standard** and **Advanced**.  
-- **Standard Maps:** Color, Normal, Roughness, Metallic, and Emissive.  
+- Make sure the normals of your mesh are facing the correct way if baking normal data.
+  (if you're not sure how to check/fix that, this link [placeholder] goes over that.
+### Choosing What Maps To Bake 
+- There are 2 categories of maps that can be baked for your decal, **Standard** and **Advanced**.  
+  <img width="225" height="209" alt="image" src="https://github.com/user-attachments/assets/002e4407-b1ac-40bd-8a88-b5aba3cf7dc7" />  
+  
+    - **Standard Maps:** Color, Normal, Roughness, Metallic, and Emissive.  
   When choosing what standard maps to bake, you only need to bake a map if there is variation in that type across the source mesh. For example, if your source mesh material is a solid color, you DO NOT need to bake color, as the bake will just set the color of the decal to match. The same goes for roughness, metallic, and emissive. For normals, if your mesh is perfectly flat ( simple text for example ) there is no need to bake normals.
    
-- **Advanced Maps:** Height, Ambient Occlusion (AO), and Material IDs.  
+    - **Advanced Maps:** Height, Ambient Occlusion (AO), and Material IDs.  
   These generate data about the mesh that can then be used in the decal material to generate complex effects.
   More information about how to use these maps can be found here [placeholder]
 
 ### Output Settings
-<img width="231" height="147" alt="image" src="https://github.com/user-attachments/assets/c42fbb36-d8c3-4312-8823-f4606cacc6bf" />  
+- Settings related to the final output of the decal and its data.  
+  <img width="231" height="147" alt="image" src="https://github.com/user-attachments/assets/c42fbb36-d8c3-4312-8823-f4606cacc6bf" />  
 
 #### Output Size
 <img width="229" height="37" alt="image" src="https://github.com/user-attachments/assets/400899b9-ea6f-4cde-8a3a-044124545a6d" />  
