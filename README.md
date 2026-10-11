@@ -105,8 +105,7 @@ Redraws the mesh of the currently selected decal. Useful if the mesh a decal aff
 
 ### Pre Bake Prep
 - Model/rotate your source geo so that it faces upward in your scene. The decal will be generated from a top down projection. The location and scale of your source object is not important, the bake will compensate.
-- Set Blender's render engine to Cycles if it is not already.
-- Make sure the normals of your mesh are facing the correct way if baking normal data.
+- Make sure the normals of the source geo are facing the correct way if baking normal data.
   (if you're not sure how to check/fix that, this link [placeholder] goes over that.
 ### Choosing What Maps To Bake 
 - There are 2 categories of maps that can be baked for your decal, **Standard** and **Advanced**.  
@@ -149,22 +148,24 @@ This name will be used to name the newly created decal, it's material, and all o
   <img width="236" height="35" alt="image" src="https://github.com/user-attachments/assets/b42042b5-2623-436e-ba95-315a8595b734" />  
 
 
-The Blender UI will freeze during the bake, this is normal.  
-The bake can take anywhere from 30 seconds to 5+ minutes depending on your bake settings, computer hardware, and Blender version.  
-Once the bake is complete, the newly created decal will appear above the source mesh and it will be selected.  
-Here is an example of a decal bake result of Suzanne:  
-<img width="603" height="497" alt="image" src="https://github.com/user-attachments/assets/62dcd483-970e-4e3c-acb7-b8298825a64d" />  
+- The Blender UI will freeze during the bake, this is normal.  
+- The bake can take anywhere from 30 seconds to 5+ minutes depending on your bake settings, computer hardware, and Blender version.  
+- Once the bake is complete, the newly created decal will appear above the source mesh and it will be selected.  
+- Here is an example of a decal bake result of Suzanne:  
+  <img width="603" height="497" alt="image" src="https://github.com/user-attachments/assets/62dcd483-970e-4e3c-acb7-b8298825a64d" />  
 
-Adjust/Transform the newly created decal like any other decal. Here is that new decal applied to a sphere:  
-<img width="529" height="474" alt="image" src="https://github.com/user-attachments/assets/8b027c63-f45e-4c48-85ca-6775b2e43abd" />
+- Adjust/Transform the newly created decal like any other decal. Here is that new decal applied to a sphere:  
+  <img width="529" height="474" alt="image" src="https://github.com/user-attachments/assets/8b027c63-f45e-4c48-85ca-6775b2e43abd" />
 
 
 
 **Decal Baking Notes**  
 - The Blender UI WILL lock up during this process. Give it time. 
 - Recommended: If it is your first time generating a decal, bake a simple low resolution test decal to get an estimate of how long a simple bake will take on your computer. Then slowly add extra maps/settings to the bake to get an idea of how long complex bakes should take with your setup. 
-- Watch the bottom of the Blender UI for any warnings about your settings. It will exit early if it finds any issues. A few examples:
-  <img width="344" height="109" alt="image" src="https://github.com/user-attachments/assets/00cd3ead-3a00-42ae-985f-1cc681742638" />  <img width="497" height="93" alt="image" src="https://github.com/user-attachments/assets/276e13f4-fcf2-4d58-a70f-68fe7a75c298" />
+- Watch the bottom of the Blender UI for any warnings about your settings. The bake will cancel and exit early if it finds any issues. A few examples:  
+  <img width="344" height="109" alt="image" src="https://github.com/user-attachments/assets/00cd3ead-3a00-42ae-985f-1cc681742638" /> 
+  <img width="422" height="104" alt="image" src="https://github.com/user-attachments/assets/db428efb-50ea-4cdb-9ec9-49af121dc07f" />  
+
 
 - Just like a normal render, bake times depend on your computer and your render settings (gpu vs cpu, choosing the correct render device settings in Blender preferences etc)
 
