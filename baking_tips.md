@@ -1,7 +1,10 @@
 testing adding a video
 
 
-https://github.com/user-attachments/assets/ae5db8b6-622f-464c-9df2-58b0865095d5
+
+https://github.com/user-attachments/assets/3ad76274-14c7-48ff-b432-fb0067e0fa7c
+
+
 
 
 
