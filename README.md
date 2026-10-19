@@ -1,10 +1,14 @@
 # Decal Factory
-Blender add-on for creating decals
+Blender add-on for creating decals.  
+Decals can be made from existing images/materials, or baked from existing geometry to create new decals.
 
+#### On this page:
 [Installation](#installation)  
 [Quick Start](#quick-startbasics)  
 [Adjust Decals](#adjust-decals)  
 [Generate Decals From Mesh](#generating-new-decals-from-existing-geo)  
+
+#### Other pages:
 [Troubleshooting](https://github.com/TechArtToolBox/Decal_Factory/blob/main/Troubleshooting.md#troubleshooting) 
 
 ## Installation
